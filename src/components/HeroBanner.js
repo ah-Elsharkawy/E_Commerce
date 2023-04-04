@@ -5,18 +5,18 @@ const  Header = (props) => {
   return (
     <div className='hero-banner-container'>
       <div>
-        <p className='beats-solo'>{props.product.smallText}</p>
-        <h3>{props.product.MidText}</h3>
+        <p className='beats-solo'>small text</p>
+        <h3>mid text</h3>
         <img src={watch} alt="headphones" className='hero-banner-image'/>
       </div>
 
       <div>
         <a href='/product/ID'>
-          <button type= "button">{props.product.btnText}</button>
+          <button type= "button">btn Text</button>
         </a>
         <div className='desc'>
-          <h5>{props.product.desc}</h5>
-          <p>{props.product.descT}</p>
+          <h5>Description</h5>
+          <p>description text</p>
         </div>
       </div>
     </div>

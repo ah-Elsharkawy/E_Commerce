@@ -1,32 +1,31 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import HeroBanner from './HeroBanner';
 import FooterBanner from './FooterBanner';
 import Product from './Product';
+import { ProductsContext } from '../contexts/ProductsContext';
+import {useNavigate} from "react-router-dom";
+import Login from './Login';
 
-const Home = () => {
-  let products = [
-    {
-      id:0,
-      name:"watch",
-      price:5,
-      smallText: "wooow!",
-      MidText: "Very Nice",
-      btnText: "click me ",
-      desc: "Description",
-      descT:"very good quality",
-    }
-  ]
+const Home = (props) => {
+  const navigate = useNavigate();
+  const {products} = useContext(ProductsContext)
+  
+  console.log(localStorage)
+  
+
+  if(localStorage.getItem("token") === 'undefined') return <Login/>
+  
   return (
     <div>
-        <HeroBanner product = {products[0]}/>
+        <HeroBanner/>
 
         <div className='products-heading'>
-          <h2>this my website</h2>
-          <p>i will do it</p>
+          <h2>Our products</h2>
         </div>
-
         <div className='products-container'>
-          <Product product={products[0]} />
+          {products?.map((product)=>(<Product key={product.id} product={product}/>)
+           
+          )}
         </div>
 
         <FooterBanner/>
