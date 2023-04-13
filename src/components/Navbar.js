@@ -19,13 +19,15 @@ useEffect(() =>{
   return (
     <div className='navbar-container'>
         <div className="d-flex flex-row">
+
         <Link className='ms-1' to= "/">Home</Link>
+        
         {token && <Link className='ms-1' to= "/login"><Button className='m-0' size= "sm"  variant="outline-primary">  Login </Button> </Link> }
+
         <Link className='ms-1' to= "/SignUp"><Button className='m-0' size= "sm"  variant="outline-primary">  SignUp  </Button> </Link>
+        
         </div>
 
-            
-        
         
         <button className='cart-icon' onClick={() => setShowCart(true)}>
             <AiOutlineShoppingCart/>
@@ -35,7 +37,6 @@ useEffect(() =>{
         </button>
 
         
-
         {showCart && <Cart/>}
     </div>
   )

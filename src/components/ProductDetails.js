@@ -74,6 +74,7 @@ let [count, setCount] = useState(0);
                   </div>
                 </div>
             </div>
+
             <div className='maylike-products-wrapper'>
                   <h2>You may also like</h2>
                   <div className='marquee'>
@@ -84,7 +85,8 @@ let [count, setCount] = useState(0);
                     </div>
                   </div>
                 </div>
-        </div>
+      </div>
+
     </div>
   )
 }

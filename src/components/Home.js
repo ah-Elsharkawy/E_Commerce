@@ -22,16 +22,12 @@ const Home = (props) => {
         <div className='products-heading'>
           <h2>Our products</h2>
         </div>
+
         <div className='products-container'>
-          {products?.map((product)=>(<Product key={product.id} product={product}/>)
-           
-          )}
+          {products?.map((product)=>(<Product key={product.id} product={product}/>))}
         </div>
 
         <FooterBanner/>
-
-
-
 
     </div>
   )

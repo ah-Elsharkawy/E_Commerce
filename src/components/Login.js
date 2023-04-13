@@ -39,19 +39,12 @@ function Login(props) {
     }
   })
 
-  function postUser(email, password){
-    console.log(`email: ${email}, password: ${password}`)
-  }
-
-
-
-
     
   return (
     <div className='form-container'>
       <Form onSubmit={(e) => {
       e.preventDefault();
-      postUser(email, password);
+      
       Axios.post("http://localhost:4000/login/",{
         email: email,
         password: password

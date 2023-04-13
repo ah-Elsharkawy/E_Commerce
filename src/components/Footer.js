@@ -10,6 +10,7 @@ const Footer = () => {
 
       <AiFillInstagram/>
       <AiOutlineTwitter/>
+      
       </p>
     </div>
   )

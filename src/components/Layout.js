@@ -5,15 +5,19 @@ import Navbar from './Navbar'
 const Layout = (props) => {
   return (
     <div className='layout'>
+
       <header>
       <Navbar/>
       </header>
+
       <main className='main-container'>
         {props.children}
       </main>
+      
       <footer>
       <Footer/>
       </footer>
+      
     </div>
   )
 }
